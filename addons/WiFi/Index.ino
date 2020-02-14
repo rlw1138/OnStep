@@ -73,6 +73,7 @@ void handleRoot() {
   data += FPSTR(FPSTR(html_headerIdx)); // page refresh
   data += FPSTR(html_main_cssB);
   data += FPSTR(html_main_css1);
+  data += FPSTR(html_main_css1x);
   data += FPSTR(html_main_css2);
   data += FPSTR(html_main_css3);
   data += FPSTR(html_main_css4);
@@ -116,7 +117,7 @@ void handleRoot() {
   // OnStep wasn't found, show warning and info.
   if (!mountStatus.valid()) { data+= FPSTR(html_bad_comms_message); sendHtml(data); sendHtmlDone(data); return; }
 
-  data+="<div style='width: 27em;'>";
+  // rlw1138 data+="<div style='width: 27em;'>";
 
   data+="<b>Site:</b><br />";
   // Browser time

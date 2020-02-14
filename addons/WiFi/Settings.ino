@@ -82,6 +82,7 @@ void handleSettings() {
   String data=FPSTR(html_headB);
   data += FPSTR(html_main_cssB);
   data += FPSTR(html_main_css1);
+  data += FPSTR(html_main_css1x);
   data += FPSTR(html_main_css2);
   data += FPSTR(html_main_css3);
   data += FPSTR(html_main_css4);

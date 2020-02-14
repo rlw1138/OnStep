@@ -4,13 +4,13 @@
 const char html_config1[] PROGMEM =
 L_MAX_SLEW_SPEED ": "
 "<form method='get' action='/configuration.htm'>"
-"<button name='ss' value='vs' type='submit'>" L_VSLOW "</button>"
-"<button name='ss' value='s' type='submit'>" L_SLOW "</button>";
+"<button name='ss' value='vs' type='submit' style='font-size:2.3vw'>" L_VSLOW "</button>"
+"<button name='ss' value='s' type='submit' style='font-size:2.3vw'>" L_SLOW "</button>";
 const char html_configMaxRate[] PROGMEM =
-"<button name='ss' value=\"n\" type='submit'>" L_NORMAL "</button>"
-"<button name='ss' value=\"f\" type='submit'>" L_FAST "</button>"
-"<button name='ss' value=\"vf\" type='submit'>" L_VFAST "</button>"
-"</form><br /><br />\r\n";
+"<button name='ss' value=\"n\" type='submit' style='font-size:3vw'>" L_NORMAL "</button>"
+"<button name='ss' value=\"f\" type='submit' style='font-size:2.3vw'>" L_FAST "</button>"
+"<button name='ss' value=\"vf\" type='submit' style='font-size:2.3vw'>" L_VFAST "</button>"
+"</form><br />\r\n";
 const char html_configBlAxis1[] PROGMEM =
 L_BACKLASH_TITLE ": <br />"
 "<form method='get' action='/configuration.htm'>"
@@ -104,6 +104,7 @@ void handleConfiguration() {
   String data=FPSTR(html_headB);
   data += FPSTR(html_main_cssB);
   data += FPSTR(html_main_css1);
+  data += FPSTR(html_main_css1x);
   data += FPSTR(html_main_css2);
   data += FPSTR(html_main_css3);
   data += FPSTR(html_main_css4);
@@ -146,7 +147,7 @@ void handleConfiguration() {
 
   data += FPSTR(html_config1);
 
-  data+="<div style='width: 35em;'>";
+//  data+="<div style='width: 35em;'>";
 
   // Slew speed
   data += FPSTR(html_configMaxRate);

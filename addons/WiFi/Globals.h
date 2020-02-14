@@ -3,22 +3,24 @@
 
 const char html_headB[] PROGMEM = "<!DOCTYPE HTML>\r\n<html>\r\n<head>\r\n<meta charset='utf-8'/>\r\n";
 const char html_headerPec[] PROGMEM = "<meta http-equiv=\"refresh\" content=\"5; URL=/pec.htm\">\r\n";
-const char html_headerIdx[] PROGMEM = "<meta http-equiv=\"refresh\" content=\"5; URL=/index.htm\">\r\n";
+const char html_headerIdx[] PROGMEM = "<meta http-equiv=\"refresh\" content=\"5; URL=/index.htm\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0\"> \r\n";
 const char html_headE[] PROGMEM = "</head>\r\n";
-const char html_bodyB[] PROGMEM = "<body bgcolor='#26262A'>\r\n";
+const char html_bodyB[] PROGMEM = "<body>\r\n";
 
 const char html_main_cssB[] PROGMEM = "<STYLE>";
-const char html_main_css1[] PROGMEM = ".clear { clear: both; } .a { background-color: #111111; } .t { padding: 10px 10px 20px 10px; width: 600px; border: 5px solid #551111;";
-const char html_main_css2[] PROGMEM = " margin: 25px 25px 0px 25px; color: #999999; background-color: #111111; min-width: 30em; } input { font-weight: bold; width:4em; background-color: #A01010; padding: 2px 2px; }";
-const char html_main_css3[] PROGMEM = ".b { padding: 10px; border-left: 5px solid #551111; border-right: 5px solid #551111; border-bottom: 5px solid #551111; margin: 0px 25px 25px 25px; width: 600px; color: #999999;";
-const char html_main_css4[] PROGMEM = "background-color: #111111; min-width: 30em; } select { width:4em; font-weight: bold; background-color: #A01010; padding: 2px 2px; } .c { color: #A01010; font-weight: bold; }";
-const char html_main_css5[] PROGMEM = "h1 { text-align: right; } a:hover, a:active { background-color: red; } .y { color: #FFFF00; font-weight: bold; }";
+const char html_main_css1[] PROGMEM = ".clear { clear: both; } body { background-color: #26262A ; font-size: calc(7px + (36 - 7) * ((100vw - 411px) / (1600 - 411))); } ";
+const char html_main_css1x[] PROGMEM = ".a { background-color: #111111; } .t { width:90vw; padding: 10px 10px 20px 10px; border: 5px solid #551111; margin: 10px 10px 0px 10px;";
+const char html_main_css2[] PROGMEM = " color: #999999; background-color: #111111; min-width: 30em; } input  { font-weight: bold; font-size:3vw; width:12vw; height:5vw; background-color: #A01010; padding: 2px 2px; } ";
+const char html_main_css3[] PROGMEM = ".b { width:90vw; padding: 10px; border-left: 5px solid #551111; border-right: 5px solid #551111; border-bottom: 5px solid #551111; margin: 0px 10px 10px 10px;";
+const char html_main_css4[] PROGMEM = " color: #999999; background-color: #111111; min-width: 30em; } select { font-weight: bold; font-size:3vw; width:12vw; height:5vw; background-color: #A01010; padding: 2px 2px; } ";
+const char html_main_css5[] PROGMEM = ".c { color: #A01010; font-weight: bold; } h1 { text-align: right; } a:hover, a:active { background-color: red; } .y { color: #FFFF00; font-weight: bold; } ";
 const char html_main_css6[] PROGMEM = "a:link, a:visited { background-color: #332222; color: #a07070; border:1px solid red; padding: 5px 10px;";
-const char html_main_css7[] PROGMEM = " margin: none; text-align: center; text-decoration: none; display: inline-block; }";
-const char html_main_css8[] PROGMEM = "button { background-color: #A01010; font-weight: bold; border-radius: 5px; margin: 2px; padding: 4px 8px; }";
-const char html_main_css_control1[] PROGMEM = ".b1 { float: left; border: 2px solid #551111; background-color: #181818; text-align: center; margin: 5px; padding: 15px; padding-top: 3px; }";
-const char html_main_css_control2[] PROGMEM = ".gb {  font-weight: bold; font-size: 150%; font-family: 'Times New Roman', Times, serif; width: 60px; height: 50px; padding: 0px; }";
-const char html_main_css_control3[] PROGMEM = ".bb {  font-weight: bold; font-size: 105%; } .bbh {  font-weight: bold; font-size: 100%; height: 2.1em; }";
+const char html_main_css7[] PROGMEM = " margin: none; text-align: center; text-decoration: none; display: inline-block; } ";
+const char html_main_css8[] PROGMEM = "button { font-weight: bold; font-size:3vw; background-color: #A01010; border-radius: 5px; margin: 2px; padding: 4px 8px; } ";
+
+const char html_main_css_control1[] PROGMEM = ".b1 { float: left; border: 2px solid #551111; background-color: #181818; text-align: center; margin: 5px; padding: 15px; padding-top: 3px; } ";
+const char html_main_css_control2[] PROGMEM = ".gb { width:12vw; height:12vw; font-weight: bold; font-size: calc(18px + (72 - 18) * ((100vw - 411px) / (1600 - 411)));  font-family: 'Times New Roman', Times, serif; padding: 0px; } ";
+const char html_main_css_control3[] PROGMEM = ".bb { width:9vw; height:7vw; font-weight: bold; font-size: 105%; } .bbh { width:9vw; height:7vw; font-weight: bold; font-size: 100%; height: 2.1em; }";
 const char html_main_cssE[] PROGMEM = "</STYLE>";
 
 const char html_bad_comms_message[] PROGMEM =
@@ -36,7 +38,7 @@ const char html_bad_comms_message[] PROGMEM =
   "</ul></div><br class=\"clear\" />\r\n"
   "</div></body></html>";
 
-const char html_onstep_header1[] PROGMEM = "<div class='t'><table width='100%%'><tr><td><b><font size='5'>";
+const char html_onstep_header1[] PROGMEM = "<div class='t'><table width='100%'><tr><td><b><font size='5'>";
 const char html_onstep_header2[] PROGMEM = "</font></b></td><td align='right'><b>" Product " " Version " (OnStep ";
 const char html_onstep_header3[] PROGMEM = ")</b></td></tr></table>";
 const char html_onstep_header4[] PROGMEM = "</div><div class='b'>\r\n";

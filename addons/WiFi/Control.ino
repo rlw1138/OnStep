@@ -30,8 +30,9 @@ const char html_controlScript4[] =
 "}\r\n"
 "</script>\r\n";
 
+// rlw1138 "<div style='text-align: center; width: 30em'>"
 const char html_controlQuick1[] PROGMEM =
-"<div style='text-align: center; width: 30em'>"
+"<div>"
 "<form style='display: inline;' method='get' action='/control.htm'>"
 "<button name='qb' class='bb' value='st' type='submit' onpointerdown='SetDateTime();' title='" L_HINT_CLOCK "'>" CLOCK_CH "</button>"
 "&nbsp;&nbsp;";
@@ -40,7 +41,7 @@ const char html_controlQuick1a[] PROGMEM =
 "<input id='th' type='hidden' name='th'><input id='tm' type='hidden' name='tm'><input id='ts' type='hidden' name='ts'>";
 const char html_controlQuick2[] PROGMEM =
 "</form>"
-"<button type='button' class='bb' onpointerdown=\"g('qc')\" title='" L_HINT_CONTINUE_GOTO "'>" ARROW_R2 HOME_CH ARROW_R2 "</button>";
+"<button type='button' class='bb' onpointerdown=\"g('qc')\" title='" L_HINT_CONTINUE_GOTO "' style='width:13vw;'>" ARROW_R2 HOME_CH ARROW_R2 "</button>";
 const char html_controlQuick3[] PROGMEM =
 "&nbsp;&nbsp;"
 "<button type='button' class='bb' onpointerdown=\"g('qh')\" title='" L_HINT_FIND_HOME "'>" ARROW_DR HOME_CH "</button>"
@@ -54,8 +55,9 @@ const char html_controlQuick5[] PROGMEM =
 "<button type='button' class='bb' style=\"height: 2.2em; color: White;\" onpointerdown=\"g('qq')\" title='" L_HINT_EMERGENCY_STOP "'>Stop!</button>"
 "</div><br class='clear' />\r\n";
 
+// rlw1138 "<div class='b1' style='width: 8em'>"
 const char html_controlTrack1[] PROGMEM = 
-"<div class='b1' style='width: 8em'>"
+"<div class='b1' style='width: 9em'>"
 "<div align='left'>Tracking:</div>"
 "<button type='button' class='bbh' style='width: 2em' onpointerdown=\"g('Ts')\" type='submit' title='" L_HINT_RATE_SIDEREAL "'>" SIDEREAL_CH "</button>";
 const char html_controlTrack2[] PROGMEM =
@@ -63,8 +65,10 @@ const char html_controlTrack2[] PROGMEM =
 const char html_controlTrack3[] PROGMEM =
 "<button type='button' class='bbh' style='width: 2em' onpointerdown=\"g('Th')\" type='submit' title='" L_HINT_RATE_SOLAR "'>" SOLAR_CH "</button>"
 "</div>";
+
+// rlw1138 "<div class='b1' style='width: 16.2em'>"
 const char html_controlAlign1[] PROGMEM = 
-"<div class='b1' style='width: 16.2em'>"
+"<div class='b1' style='width: 25em'>"
 "<div align='left'>" L_ALIGN ":</div>"
 "<form method='get' action='/control.htm'>";
 const char html_controlAlign2[] PROGMEM =
@@ -74,8 +78,9 @@ const char html_controlAlign3[] PROGMEM =
 const char html_controlTrack4[] PROGMEM =
 "</div><br class='clear' />\r\n";
 
+// rlw1138 "<div class='b1' style='width: 27em'>"
 const char html_controlGuide1[] PROGMEM =
-"<div class='b1' style='width: 27em'>"
+"<div class='b1' style='align: center; padding-left: 2.5em; padding-right: 2.5em'>"
 "<div align='left'>Guide:</div>"
 "<button class='gb' type='button' onpointerdown=\"g('n1')\" onpointerup=\"g('n0')\">" BUTTON_N "</button><br />";
 const char html_controlGuide2[] PROGMEM =
@@ -98,8 +103,9 @@ const char html_controlGuide7[] PROGMEM =
 "<button class='bbh' type='button' onpointerdown=\"g('R8')\">" L_VFAST_RATE "</button>"
 "</div><br class='clear' />\r\n";
 
+// rlw1138 "<div class='b1' style='width: 27em'>";
 const char html_controlFocus1[] PROGMEM =
-"<div class='b1' style='width: 27em'>";
+"<div class='b1'>";
 const char html_controlFocus2[] PROGMEM =
 "<button class='bbh' type='button' onpointerdown=\"gf('F1')\" title='" L_HINT_FOC_SEL " 1'>1</button>"
 "<button class='bbh' type='button' onpointerdown=\"gf('F2')\" title='" L_HINT_FOC_SEL " 2'>2</button>&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -115,8 +121,9 @@ const char html_controlFocus5[] PROGMEM =
 const char html_controlFocus6[] PROGMEM =
 "</div><br class='clear' />\r\n";
 
+// rlw1138 "<div class='b1' style='width: 27em'>";
 const char html_controlRotate0[] PROGMEM =
-"<div class='b1' style='width: 27em'>";
+"<div class='b1'>";
 const char html_controlRotate1[] PROGMEM =
 "<button class='bbh' type='button' style='height: 2.1em' onpointerdown=\"gf('ho')\" title='" L_HINT_ROT_FIND_HOME "'>" ARROW_DR HOME_CH "</button>"
 "<button class='bbh' type='button' style='height: 2.1em' onpointerdown=\"gf('re')\" title='" L_HINT_ROT_RESET_HOME "'>" CAUTION_CH HOME_CH "</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -135,8 +142,9 @@ const char html_controlDeRotate2[] PROGMEM =
 const char html_controlRotate4[] PROGMEM =
 "</div><br class='clear' />\r\n";
 
+// rlw1138 <div class='b1' style='width: 27em'>
 #if defined(SW0) || defined(SW1) || defined(SW2) || defined(SW3) || defined(SW4) || defined(SW5) || defined(SW6) || defined(SW7) || defined(SW8) || defined(AN3) || defined(AN4) || defined(AN5) || defined(AN6) || defined(AN7) || defined(AN8)
-const char html_controlAuxB[] PROGMEM = "<div class='b1' style='width: 27em'><div align='left'>Aux:</div>";
+const char html_controlAuxB[] PROGMEM = "<div class='b1'><div align='left'>Aux:</div>";
 #ifdef SW0
 const char html_controlSwitch0[] PROGMEM = SW0 "<br /><button type='button' onpointerdown=\"s('sw0','255')\" >" L_ON "</button><button type='button' onpointerdown=\"s('sw0','0')\" >" L_OFF "</button><br />";
 #endif
@@ -222,6 +230,7 @@ void handleControl() {
   String data=FPSTR(html_headB);
   data += FPSTR(html_main_cssB);
   data += FPSTR(html_main_css1);
+  data += FPSTR(html_main_css1x);
   data += FPSTR(html_main_css2);
   data += FPSTR(html_main_css3);
   data += FPSTR(html_main_css4);

@@ -32,12 +32,12 @@
 #define DISPLAY_INTERNAL_TEMPERATURE  OFF //    OFF, ON for internal MCU temperature display.                                 Option
 #define DISPLAY_WIFI_SIGNAL_STRENGTH   ON //     ON, Wireless signal strength reported via web interface. OFF otherwise.      Option
 #define DISPLAY_SPECIAL_CHARS          ON //     ON, For standard ASCII special symbols (compatibility.)                      Infreq
-#define DISPLAY_ADVANCED_CHARS         ON //     ON, For standard "RA/Dec" instead of symbols.                                Infreq
+#define DISPLAY_ADVANCED_CHARS        OFF //     ON, For standard "RA/Dec" instead of symbols.                                Infreq
 #define DISPLAY_HIGH_PRECISION_COORDS OFF //    OFF, ON for high precision coordinate display on status page.                 Infreq
 
 // COMMAND CHANNELS ----------------------------------------------------------------------------------------------------------------
 #define STANDARD_COMMAND_CHANNEL       ON //     ON, Enable standard cmd channel port 9999 use w/Android App & ASCOM driver.  Infreq
-#define PERSISTENT_COMMAND_CHANNEL     ON //     ON, Enable persistent cmd channel port 9998 use w/INDI? & Stellarium Mobile. Infreq
+#define PERSISTENT_COMMAND_CHANNEL     ON //    OFF, Enable persistent cmd channel port 9998 use w/INDI? & Stellarium Mobile. Infreq
                                           //         Experimental, possibly causes problems w/standard cmd channel if enabled.
 #define MONITOR_GUIDE_COMMANDS        OFF //    OFF, Allow error reporting to also monitor guide commands.                    Infreq
 
